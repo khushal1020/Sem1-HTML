@@ -1,0 +1,28 @@
+// Traffic Light Code
+// Green = Pin 1, Yellow = Pin 2, Red = Pin 3
+
+void setup() {
+  pinMode(1, OUTPUT);   // Green
+  pinMode(2, OUTPUT);   // Yellow
+  pinMode(3, OUTPUT);   // Red
+}
+
+void loop() {
+  // Green ON
+  digitalWrite(1, HIGH);
+  digitalWrite(2, LOW);
+  digitalWrite(3, LOW);
+  delay(5000);
+
+  // Yellow ON
+  digitalWrite(1, LOW);
+  digitalWrite(2, HIGH);
+  digitalWrite(3, LOW);
+  delay(2000);
+
+  // Red ON
+  digitalWrite(1, LOW);
+  digitalWrite(2, LOW);
+  digitalWrite(3, HIGH);
+  delay(5000);
+}
