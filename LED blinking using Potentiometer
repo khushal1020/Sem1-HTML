@@ -1,0 +1,16 @@
+int potPin = A0;     // Potentiometer signal pin
+int ledPin = 9;      // LED PWM pin
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  int potValue = analogRead(potPin);     // Read 0–1023
+  Serial.println(potValue);
+
+  int brightness = map(potValue, 0, 1023, 0, 255);   // Convert to 0–255
+
+  analogWrite(ledPin, brightness);        // Control LED brightness
+}
